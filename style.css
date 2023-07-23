@@ -1,0 +1,137 @@
+/*---------- Google Fonts ----------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*---------- CSS Reset ----------*/
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/*---------- Global Variables ----------*/
+:root {
+    --side-background-color: #040b14;
+    --theme-color: #00A78E;
+    --icon-color: #2C2F3F;
+    --text-color: #525252;
+    --background-color: #F7F7F7;
+}
+
+/*--------------- Header ---------------*/
+header {
+    height: 100vh;
+    width: 300px;
+    padding: 15px 30px;
+    background: var(--side-background-color);
+    overflow-y: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: 0.4s;
+    z-index: 99;
+}
+
+/* header::-webkit-scrollbar {
+    display: none;
+} */
+
+header .profile {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.profile .user-avatar {
+    width: 150px;
+    border-radius: 50%;
+    border: 10px solid var(--icon-color);
+    transition: 0.2s;
+}
+
+.profile .user-avatar:hover {
+    border: 10px solid var(--theme-color);
+}
+
+header h1 {
+    color: white;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 3rem;
+}
+
+header .social-icons a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 37px;
+    background: var(--icon-color);
+    color: white;
+    font-size: 18px;
+    margin: 1.5px;
+    transition: 0.2s;
+}
+
+header .social-icons a:hover {
+    background: var(--theme-color);
+}
+
+/*--------------- NavBar ---------------*/
+nav {
+    margin-top: 20px;
+}
+
+.list {
+    list-style: none;
+}
+
+.list__item a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 10px;
+    margin: 7px 0;
+    color: lightgray;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.6px;
+}
+
+nav .list__item i {
+    margin-right: 10px;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+nav .list__item a:hover i {
+    color: var(--theme-color);
+}
+
+/*--------------- Footer ---------------*/
+.footer {
+    text-align: center;
+    background: var(--side-background-color);
+    width: 300px;
+    color: lightgray;
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transition: 0.2s;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--theme-color);
+    transition: 0.2s;
+}
+
+.footer a:hover {
+    color: white;
+}
