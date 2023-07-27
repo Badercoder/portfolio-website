@@ -20,9 +20,9 @@ document.addEventListener("click", (event) => {
     }
 })
 
-navLinks.forEach(() => {
-    document.addEventListener("click", (event) => {
+navLinks.forEach((links) => {
+    links.addEventListener("click", () => {
         document.querySelector("body").classList.remove("mobile-nav-active");
-        menuBtn.classList.remove("fa-xmark")
+        menuBtn.classList.remove("fa-xmark");
     })
 })
