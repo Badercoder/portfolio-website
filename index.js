@@ -3,6 +3,7 @@
 const menuBtn = document.getElementById("menuBtn");
 const header = document.querySelector("header");
 const body = document.querySelector("body");
+const navLinks = document.querySelectorAll(".nav--links")
 
 menuBtn.addEventListener("click", (event) => {
     document.querySelector("body").classList.toggle("mobile-nav-active");
@@ -17,4 +18,11 @@ document.addEventListener("click", (event) => {
         document.querySelector("body").classList.toggle("mobile-nav-active");
         menuBtn.classList.toggle("fa-xmark")
     }
+})
+
+navLinks.forEach(() => {
+    document.addEventListener("click", (event) => {
+        document.querySelector("body").classList.remove("mobile-nav-active");
+        menuBtn.classList.remove("fa-xmark")
+    })
 })
