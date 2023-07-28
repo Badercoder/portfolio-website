@@ -64,6 +64,7 @@ header h1 {
 header .social-icons {
     text-align: initial;
     margin-top: 10px;
+    text-wrap: nowrap;
 }
 
 header .social-icons a {
@@ -76,7 +77,7 @@ header .social-icons a {
     background: var(--icon-color);
     color: white;
     font-size: 18px;
-    margin: 1.5px 0.25rem;
+    margin: 1.5px 0.5rem;
     transition: 0.2s;
 }
 
@@ -152,7 +153,7 @@ nav .list__item .active i {
     display: none;
     position: fixed;
     top: 25px;
-    right: 25px;
+    right: 15px;
     font-size: 20px;
     width: 40px;
     height: 40px;
@@ -178,3 +179,60 @@ nav .list__item .active i {
 }
 
 .mobile-nav-active header, .mobile-nav-active .footer {left: 0;}
+
+/*--------------- Body ---------------*/
+main {
+    margin-left: 300px;
+    transition: 0.2s;
+    background: var(--background-color);
+}
+
+@media screen and (max-width: 1050px) {
+    main {margin-left: 0;}
+}
+
+/*----------- Home Section -----------*/
+#home {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(145deg, var(--background-color), var(--side-background-color));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 70px;
+}
+
+.home-row {z-index: 1;}
+
+.home-row h1 {
+    font-size: 60px;
+    color: var(--background-color);
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    line-height: 70px;
+}
+
+.home-row span {color: var(--theme-color);}
+
+.home-row p {
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 500;}
+
+p .auto-input {
+    color: whitesmoke;
+    border-bottom: 4px solid var(--theme-color);
+}
+
+@media screen and (max-width: 670px) {
+    
+    #home {padding-left: 30px;}
+    .home-row h1 {
+        font-size: 35px;
+        letter-spacing: 0;
+        line-height: 50px;}
+    .home-row p {
+        font-size: 20px;
+        font-weight: 400;}
+}

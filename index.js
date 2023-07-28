@@ -5,9 +5,9 @@ const header = document.querySelector("header");
 const body = document.querySelector("body");
 const navLinks = document.querySelectorAll(".nav--links")
 
+// Menu Bar Slider
 menuBtn.addEventListener("click", (event) => {
-    document.querySelector("body").classList.toggle("mobile-nav-active");
-    menuBtn.classList.toggle("fa-xmark")
+    menuBarToggle();
     event.stopPropagation();
 })
 
@@ -15,14 +15,26 @@ document.addEventListener("click", (event) => {
     const inSideClick = header.contains(event.target);
     
     if(!inSideClick && body.classList.contains("mobile-nav-active")) {
-        document.querySelector("body").classList.toggle("mobile-nav-active");
-        menuBtn.classList.toggle("fa-xmark")
+        menuBarToggle();
     }
 })
 
 navLinks.forEach((links) => {
     links.addEventListener("click", () => {
-        document.querySelector("body").classList.remove("mobile-nav-active");
-        menuBtn.classList.remove("fa-xmark");
+        menuBarToggle();
     })
+})
+
+function menuBarToggle() {
+    document.querySelector("body").classList.toggle("mobile-nav-active");
+    menuBtn.classList.toggle("fa-xmark")
+}
+
+// Typing Effect
+const typing = new Typed(".auto-input", {
+    strings: ["Web Developer", "Freelancer"],
+    typeSpeed: 100,
+    backSpeed: 40,
+    backDelay: 2000,
+    loop: true
 })
