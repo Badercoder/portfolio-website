@@ -58,7 +58,12 @@ header h1 {
     color: white;
     font-weight: 600;
     text-align: left;
-    padding-left: 3rem;
+    padding-left: 0.5rem;
+}
+
+header .social-icons {
+    text-align: initial;
+    margin-top: 10px;
 }
 
 header .social-icons a {
@@ -71,7 +76,7 @@ header .social-icons a {
     background: var(--icon-color);
     color: white;
     font-size: 18px;
-    margin: 1.5px;
+    margin: 1.5px 0.25rem;
     transition: 0.2s;
 }
 
@@ -80,7 +85,7 @@ header .social-icons a:hover {
 }
 
 /*--------------- NavBar ---------------*/
-nav {margin-top: 20px;}
+nav {margin-block: 10px;}
 
 .list {list-style: none;}
 
@@ -93,6 +98,16 @@ nav {margin-top: 20px;}
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 0.6px;
+    width: -webkit-fill-available;
+    border-bottom: 1px solid var(--text-color);
+    margin-bottom: 0.25rem;
+}
+
+nav .list__item a:hover {
+    border-bottom: 1px solid var(--theme-color);
+}
+.list__item a.active {
+    border-bottom: 1px solid var(--theme-color);
 }
 
 nav .list__item i {
