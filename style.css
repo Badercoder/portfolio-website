@@ -40,7 +40,6 @@ img {width: 100%;}
     color: black;
     font-size: 30px;
     margin-bottom: 10px;}
-
 .divider {
     width: 80px;
     height: 4px;
@@ -278,9 +277,17 @@ p .auto-input {
     }}
 
 @media screen and (max-width: 500px) {
-    #about {
-        padding-left: 15px;
-    }
+    #about {padding: 35px 15px;}
     #about .icon-list-col {
         gap: 10px;
-        flex-direction: column;}}
+        flex-direction: column;}
+    #about .info-col h3 {
+        font-weight: 700;
+        font-size: 25px;
+        letter-spacing: 0;}
+    #about .info-col p {
+        font-size: 14px;
+        letter-spacing: 0;}
+    #about .icon-list-col {margin-top: 10px;}
+    #about .icon-list:first-of-type li:last-child {margin-bottom: 0;}
+    #about .icon-list:last-of-type li:first-child {margin-top: 5px;}}
