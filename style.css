@@ -206,7 +206,10 @@ p .auto-input {
 
 @media screen and (max-width: 670px) {
     
-    #home {padding-left: 30px;}
+    #home {
+        justify-content: unset;
+        padding-left: 30px;}
+    .home-row {margin-block: 60%;}
     .home-row h2 {
         font-size: 35px;
         letter-spacing: 0;
@@ -260,7 +263,18 @@ p .auto-input {
     font-size: 14px;}
 
 @media screen and (max-width: 1050px) {
-    #about .img-col {
-        display: none;}
+    #about .icon-list li {margin-left: 0;}
+    #about .icon-list:first-child li:last-child {margin-bottom: 0;}}
 
-}
+@media screen and (max-width: 768px) {
+
+    .about-col {flex-direction: column;}
+    #about .icon-list-col {
+        gap: 10px;
+        flex-direction: row;
+    }}
+
+@media screen and (max-width: 500px) {
+    #about .icon-list-col {
+        gap: 10px;
+        flex-direction: column;}}
