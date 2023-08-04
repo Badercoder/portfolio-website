@@ -218,6 +218,9 @@ p .auto-input {
         font-size: 20px;
         font-weight: 400;}}
 
+@media screen and (max-width: 500px) {
+    #home {padding-left: 20px;}}
+
 /*----------- About Section ----------*/
 #about {padding: 70px 30px;}
 #about .divider ~ p {
@@ -275,6 +278,9 @@ p .auto-input {
     }}
 
 @media screen and (max-width: 500px) {
+    #about {
+        padding-left: 15px;
+    }
     #about .icon-list-col {
         gap: 10px;
         flex-direction: column;}}
