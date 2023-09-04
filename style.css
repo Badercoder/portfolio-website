@@ -357,3 +357,133 @@ section:nth-of-type(2){padding-block: 0;}
 #skills .skill-box:nth-of-type(3) .skill-inner-line {width: 30%;}
 #skills .skill-box:nth-of-type(4) .skill-inner-line {width: 15%;}
 #skills .skill-box:nth-of-type(5) .skill-inner-line {width: 35%;}
+
+/*-------------------------- Resume Section -----------------------*/
+.resume-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.resume-cols {flex-basis: 50%;}
+.resume-row h3 {
+    color: var(--side-background-color);
+    font-weight: 600;
+    font-size: 23px;
+    margin: 15px 0;}
+.resume-row .my-info {
+    padding: 0 20px;
+    margin: 20px 0;
+    border-left: 2px solid var(--theme-color);
+    position: relative;
+}
+.resume-row .my-info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -8px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid var(--theme-color);
+    background: white;
+}
+
+.resume-cols h4 {
+    color: var(--side-background-color);
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.resume-cols .my-info p {
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 600;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+.resume-cols .my-info li {
+    margin-block: 10px;
+    margin-left: 20px;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.resume-row .my-edu {
+    padding: 0 20px;
+    border-left: 2px solid var(--theme-color);
+    position: relative;
+}
+
+.resume-cols .sp-box {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 4px 22px;
+    background: rgb(190, 190, 190);
+    color: white;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.resume-cols span + p {
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+.resume-cols span + p + p {
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.resume-row .pro-exp {
+    padding: 0 20px;
+    margin: 0;
+    border-left: 2px solid var(--theme-color);
+    position: relative;
+}
+.resume-row .pro-exp:last-of-type::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -8px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid var(--theme-color);
+    background: white;
+}
+
+.resume-cols .pro-exp li {
+    margin-block: 10px;
+    margin-left: 20px;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 600;   
+}
+
+.resume-cols .pro-exp:first-of-type li:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 805px) {
+    #resume .resume-row {
+        flex-direction: column;
+        gap: 0;}
+    .resume-cols {flex-basis: 100%;}
+    
+}
+
+@media screen and (max-width: 500px) {
+
+}
